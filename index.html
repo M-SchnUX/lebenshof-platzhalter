@@ -3,52 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lebenshof - Ein sicherer Hafen</title>
+    <title>Nisels-Muhviehworld</title>
     <style>
-        body, html { height: 100%; margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: white; overflow: hidden; }
+        /* Hintergrund auf Schwarz setzen, damit freie Flächen bei breiten Viewports gefüllt sind */
+        body, html { 
+            height: 100%; 
+            margin: 0; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            color: white; 
+            overflow: hidden; 
+            background-color: #000; 
+        }
+
         .bg { 
-            background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url('hintergrund.jpg.jpeg'); 
+            /* Linear-Gradient für bessere Lesbarkeit über dem Bild */
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('hintergrund.jpg.jpeg'); 
             height: 100%; 
             background-position: center; 
             background-repeat: no-repeat; 
-            background-size: cover; 
+            /* 'contain' sorgt dafür, dass das Hochformat-Bild nie abgeschnitten wird */
+            background-size: contain; 
             display: flex; 
             align-items: center; 
             justify-content: center; 
             text-align: center; 
         }
+
         .content { 
-            max-width: 700px; 
-            padding: 40px; 
-            background: rgba(0,0,0,0.3); 
+            max-width: 85%; /* Flexibler für mobile Geräte */
+            width: 500px;
+            padding: 30px; 
+            background: rgba(0,0,0,0.5); 
             border-radius: 20px; 
-            backdrop-filter: blur(8px);
+            backdrop-filter: blur(10px);
             border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
-        h1 { font-size: 2.8rem; margin-bottom: 15px; font-weight: 300; letter-spacing: 1px; }
-        p { font-size: 1.3rem; margin-bottom: 35px; line-height: 1.6; font-weight: 300; }
+
+        h1 { font-size: 2.2rem; margin-bottom: 15px; font-weight: 300; letter-spacing: 1px; }
+        p { font-size: 1.1rem; margin-bottom: 35px; line-height: 1.6; font-weight: 300; }
+
         .btn { 
             background-color: #e67e22; 
             color: white; 
-            padding: 15px 35px; 
+            padding: 15px 30px; 
             text-decoration: none; 
             border-radius: 50px; 
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: bold; 
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            display: inline-block;
         }
-        .btn:hover { background-color: #d35400; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.3); }
+
+        .btn:hover { 
+            background-color: #d35400; 
+            transform: translateY(-2px); 
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4); 
+        }
+
+        /* Responsive Anpassung für sehr kleine Handys */
+        @media (max-width: 480px) {
+            h1 { font-size: 1.8rem; }
+            .content { padding: 20px; }
+        }
     </style>
 </head>
 <body>
     <div class="bg">
         <div class="content">
-            <h1>Pst... hier entsteht gerade ein sicherer Hafen.</h1>
+            <h1> Einen Muuhment. Hier entsteht gerade unsere Webseite</h1>
             <p>Unsere Bewohner bereiten sich auf euren Besuch vor. Bald findest du hier alle Geschichten und Wege, wie du uns unterstützen kannst.</p>
-            <a href="https://www.instagram.com/nisels_muhviehworld_/" class="btn" target="_blank">Besuche uns auf Instagram</a>
+            <a href="https://www.instagram.com/lebenshof_unterm_regenbogen?igsh=MXR3cmZreGRndGZ2Yw%3D%3D&utm_source=qr" class="btn" target="_blank">Besuche uns auf Instagram</a>
         </div>
     </div>
 </body>
-
 </html>
